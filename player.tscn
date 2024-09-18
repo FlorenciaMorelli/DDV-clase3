@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbncg1wvug2ou"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ex5ot"]
+radius = 55.0
+height = 174.0
+
+[sub_resource type="Gradient" id="Gradient_21m5k"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hu5wk"]
+gradient = SubResource("Gradient_21m5k")
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ex5ot")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.316406, 141)
+texture = SubResource("GradientTexture1D_hu5wk")
