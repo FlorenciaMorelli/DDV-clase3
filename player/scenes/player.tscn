@@ -3,22 +3,22 @@
 [ext_resource type="Script" path="res://player/scripts/player.gd" id="1_x4wvy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ex5ot"]
-radius = 25.0
-height = 174.0
+radius = 28.0
+height = 180.0
 
 [sub_resource type="Gradient" id="Gradient_21m5k"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_hu5wk"]
 gradient = SubResource("Gradient_21m5k")
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_x4wvy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ex5ot")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.154297, 141)
+scale = Vector2(0.154297, 165.5)
 texture = SubResource("GradientTexture1D_hu5wk")
 
 [node name="Camera2D" type="Camera2D" parent="."]
