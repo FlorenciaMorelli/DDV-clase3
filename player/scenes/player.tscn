@@ -17,3 +17,5 @@ shape = SubResource("CapsuleShape2D_ex5ot")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.316406, 141)
 texture = SubResource("GradientTexture1D_hu5wk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
