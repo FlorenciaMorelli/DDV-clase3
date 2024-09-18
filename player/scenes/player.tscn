@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbncg1wvug2ou"]
+[gd_scene load_steps=5 format=3 uid="uid://cbncg1wvug2ou"]
+
+[ext_resource type="Script" path="res://player/scripts/player.gd" id="1_x4wvy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ex5ot"]
 radius = 25.0
@@ -10,6 +12,7 @@ height = 174.0
 gradient = SubResource("Gradient_21m5k")
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_x4wvy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ex5ot")
