@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://1bpukorspejj"]
+
+[ext_resource type="Script" path="res://item/scripts/item.gd" id="1_uuja8"]
+
+[sub_resource type="Gradient" id="Gradient_elquf"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q6l7y"]
+gradient = SubResource("Gradient_elquf")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgho2"]
+size = Vector2(64.2141, 64)
+
+[node name="Item" type="Sprite2D"]
+self_modulate = Color(0.747537, 0.535802, 0, 1)
+scale = Vector2(2.33594, 2.1875)
+texture = SubResource("GradientTexture2D_q6l7y")
+script = ExtResource("1_uuja8")
+item = "a coin"
+
+[node name="CoinArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoinArea"]
+shape = SubResource("RectangleShape2D_fgho2")
+
+[connection signal="body_entered" from="CoinArea" to="." method="_on_coin_area_body_entered"]

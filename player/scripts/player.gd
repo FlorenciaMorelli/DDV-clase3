@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var inventory = []
+
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -24,3 +26,8 @@ func _physics_process(delta: float) -> void:
 
 #	El objeto se va moviendo
 	move_and_slide()
+
+
+func addToInventory(item) :
+	inventory.append(item)
+	print("You picked ", item, ". Inventory: ", inventory)

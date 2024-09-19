@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://coesck68iea0w"]
+[gd_scene load_steps=5 format=3 uid="uid://coesck68iea0w"]
 
 [ext_resource type="PackedScene" uid="uid://cxxj0lt5o2uri" path="res://plataform/scenes/platform.tscn" id="1_5lh1a"]
 [ext_resource type="PackedScene" uid="uid://cbncg1wvug2ou" path="res://player/scenes/player.tscn" id="2_sfnt5"]
 [ext_resource type="PackedScene" uid="uid://bod2544eeb5rv" path="res://obstacle/scenes/obstacle.tscn" id="3_6qbx0"]
+[ext_resource type="PackedScene" uid="uid://1bpukorspejj" path="res://item/scenes/item.tscn" id="4_qyt8q"]
 
 [node name="Level1" type="Node2D"]
 
@@ -18,3 +19,13 @@ basePosition = Vector2(0, 100)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_sfnt5")]
 position = Vector2(2, 1)
+
+[node name="Item" parent="." instance=ExtResource("4_qyt8q")]
+position = Vector2(190.375, 119.5)
+scale = Vector2(1.19922, 1.20313)
+item = "tiempo"
+
+[node name="Item2" parent="." instance=ExtResource("4_qyt8q")]
+position = Vector2(-78, 189)
+scale = Vector2(1.19922, 1.20313)
+item = "tengo"
