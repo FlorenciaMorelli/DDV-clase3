@@ -7,13 +7,13 @@
 [node name="Level1" type="Node2D"]
 
 [node name="Platform" parent="." instance=ExtResource("1_5lh1a")]
-position = Vector2(63, 285)
+position = Vector2(2, 280)
 
 [node name="Platform2" parent="." instance=ExtResource("1_5lh1a")]
-position = Vector2(359, 233)
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_sfnt5")]
-position = Vector2(0, 91)
+position = Vector2(252, 235)
 
 [node name="Obstacle" parent="." instance=ExtResource("3_6qbx0")]
-position = Vector2(340, -40)
+position = Vector2(251, -42)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_sfnt5")]
+position = Vector2(2, 1)

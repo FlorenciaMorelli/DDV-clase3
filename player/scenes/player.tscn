@@ -3,8 +3,7 @@
 [ext_resource type="Script" path="res://player/scripts/player.gd" id="1_x4wvy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ex5ot"]
-radius = 28.0
-height = 180.0
+height = 126.0
 
 [sub_resource type="Gradient" id="Gradient_21m5k"]
 
@@ -18,7 +17,7 @@ script = ExtResource("1_x4wvy")
 shape = SubResource("CapsuleShape2D_ex5ot")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.154297, 165.5)
+scale = Vector2(0.0615234, 121.75)
 texture = SubResource("GradientTexture1D_hu5wk")
 
 [node name="Camera2D" type="Camera2D" parent="."]

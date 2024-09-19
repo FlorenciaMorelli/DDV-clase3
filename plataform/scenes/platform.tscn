@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxxj0lt5o2uri"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snew1"]
-size = Vector2(295, 100)
+size = Vector2(250, 69)
 
 [sub_resource type="Gradient" id="Gradient_srpps"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -17,5 +17,5 @@ gradient = SubResource("Gradient_srpps")
 shape = SubResource("RectangleShape2D_snew1")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(1.156, 100)
+scale = Vector2(0.976438, 70)
 texture = SubResource("GradientTexture1D_unas8")
