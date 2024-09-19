@@ -22,6 +22,7 @@ size = Vector2(70, 130)
 script = ExtResource("1_dch44")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 0.008
 can_sleep = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
@@ -33,11 +34,11 @@ self_modulate = Color(0.995231, 0.602598, 0.79456, 1)
 scale = Vector2(0.273438, 62)
 texture = SubResource("GradientTexture1D_u2vwv")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Stopper" type="StaticBody2D" parent="."]
 position = Vector2(0, 35)
 script = ExtResource("2_m4xtu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stopper"]
 shape = SubResource("RectangleShape2D_287uu")
 
 [node name="Trigger" type="Area2D" parent="."]
@@ -47,4 +48,4 @@ position = Vector2(0, 40)
 position = Vector2(0, 63)
 shape = SubResource("RectangleShape2D_8ljpp")
 
-[connection signal="body_entered" from="Trigger" to="StaticBody2D" method="_on_trigger_body_entered"]
+[connection signal="body_entered" from="Trigger" to="Stopper" method="_on_trigger_body_entered"]

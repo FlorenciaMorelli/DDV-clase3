@@ -13,7 +13,8 @@ position = Vector2(2, 280)
 position = Vector2(252, 235)
 
 [node name="Obstacle" parent="." instance=ExtResource("3_6qbx0")]
-position = Vector2(251, -42)
+position = Vector2(319, -45)
+basePosition = Vector2(0, 100)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_sfnt5")]
 position = Vector2(2, 1)
