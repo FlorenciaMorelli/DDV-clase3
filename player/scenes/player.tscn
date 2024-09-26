@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbncg1wvug2ou"]
+[gd_scene load_steps=10 format=3 uid="uid://cbncg1wvug2ou"]
 
 [ext_resource type="Script" path="res://player/scripts/player.gd" id="1_x4wvy"]
 [ext_resource type="Texture2D" uid="uid://cehawuynsk0bt" path="res://player/fox_running.png" id="2_r2m3n"]
@@ -45,6 +45,17 @@ _data = {
 "running": SubResource("Animation_oij6p")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5ch8b"]
+animation = &"running"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mo6ht"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nmte8"]
+states/running/node = SubResource("AnimationNodeAnimation_5ch8b")
+states/running/position = Vector2(425, 100)
+transitions = ["Start", "running", SubResource("AnimationNodeStateMachineTransition_mo6ht")]
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_x4wvy")
 
@@ -63,3 +74,8 @@ frame = 1
 libraries = {
 "": SubResource("AnimationLibrary_d15yh")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_nmte8")
+advance_expression_base_node = NodePath("")
+anim_player = NodePath("../AnimationPlayer")
