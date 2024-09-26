@@ -33,9 +33,16 @@ gradient = SubResource("Gradient_0bvi8")
 width = 3
 
 [node name="Level1" type="Node2D"]
+position = Vector2(-88, 8)
 
 [node name="Platform" parent="." instance=ExtResource("1_5lh1a")]
 position = Vector2(2, 280)
+
+[node name="Platform3" parent="." instance=ExtResource("1_5lh1a")]
+position = Vector2(-248, 280)
+
+[node name="Platform4" parent="." instance=ExtResource("1_5lh1a")]
+position = Vector2(-496, 280)
 
 [node name="Platform2" parent="." instance=ExtResource("1_5lh1a")]
 position = Vector2(252, 235)
@@ -45,7 +52,7 @@ position = Vector2(319, -45)
 basePosition = Vector2(0, 100)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_sfnt5")]
-position = Vector2(69, -3)
+position = Vector2(-509, 16)
 
 [node name="Item" parent="." instance=ExtResource("4_qyt8q")]
 position = Vector2(190.375, 119.5)
@@ -58,6 +65,7 @@ scale = Vector2(1.19922, 1.20313)
 item = "tengo"
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-512, 27)
 amount = 300
 process_material = SubResource("ParticleProcessMaterial_x1ra2")
 texture = SubResource("GradientTexture1D_y5ycf")
